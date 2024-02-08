@@ -53,3 +53,8 @@ release-check:
 
 release:
 	rm -rf dist/ && python setup.py sdist && twine upload dist/*
+
+.PHONY: install
+install:
+	pip uninstall mutmut
+	pip install ./dist/mutmut-2.4.5.tar.gz
